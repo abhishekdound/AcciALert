@@ -1,15 +1,16 @@
 package com.TroubleShooters.AcciAlert_server.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.time.LocalDateTime;
+
 
 @Entity
-@Table(name = "alerts") // Custom table name
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "alerts") // Custom table name
 public class Alert {
 
     @Id
@@ -23,5 +24,21 @@ public class Alert {
     private String gpsCoordinates; // GPS coordinates of the accident (latitude, longitude format)
 
     @Column(nullable = false)
-    private String timestamp; // Timestamp of when the alert was created (formatted as a string)
+    private LocalDateTime timestamp; // Timestamp of when the alert was created
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public String getGpsCoordinates() {
+        return gpsCoordinates;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
 }

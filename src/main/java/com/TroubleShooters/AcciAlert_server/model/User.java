@@ -2,11 +2,10 @@ package com.TroubleShooters.AcciAlert_server.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
+
 
 @Entity
 @Data
@@ -31,4 +30,52 @@ public class User {
     private String name; // User's name
     private String gender; // Gender of user
     private String dateOfBirth; // Date of birth (YYYY-MM-DD format)
+
+    private String bloodGroup; // User's blood group
+    private String aadhaarNumber; // Aadhaar Card number
+    private String permanentAddress; // User's permanent address
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public String getVehicleNumber() {
+        return vehicleNumber;
+    }
+
+    public String getVehicleModel() {
+        return vehicleModel;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public List<String> getEmergencyContacts() {
+        return emergencyContacts;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public String getAadhaarNumber() {
+        return aadhaarNumber;
+    }
+
+    public String getPermanentAddress() {
+        return permanentAddress;
+    }
 }

@@ -19,4 +19,5 @@ public class Hospital {
     private String hospitalAddress; // Address of the hospital
     private String hospitalPincode; // Pincode of the hospital
     private String phoneNo; // Phone number of the hospital
+    private String gpsCoordinates; // GPS coordinates (latitude, longitude)
 }
