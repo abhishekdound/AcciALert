@@ -1,9 +1,7 @@
 package com.TroubleShooters.AcciAlert_server.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Data
@@ -20,4 +18,44 @@ public class Hospital {
     private String hospitalPincode; // Pincode of the hospital
     private String phoneNo; // Phone number of the hospital
     private String gpsCoordinates; // GPS coordinates (latitude, longitude)
+
+    public Long getHospitalId() {
+        return hospitalId;
+    }
+
+    public String getHospitalAddress() {
+        return hospitalAddress;
+    }
+
+    public String getHospitalPincode() {
+        return hospitalPincode;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public String getGpsCoordinates() {
+        return gpsCoordinates;
+    }
+
+    public void setHospitalId(Long hospitalId) {
+        this.hospitalId = hospitalId;
+    }
+
+    public void setHospitalAddress(String hospitalAddress) {
+        this.hospitalAddress = hospitalAddress;
+    }
+
+    public void setHospitalPincode(String hospitalPincode) {
+        this.hospitalPincode = hospitalPincode;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public void setGpsCoordinates(String gpsCoordinates) {
+        this.gpsCoordinates = gpsCoordinates;
+    }
 }
